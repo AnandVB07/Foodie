@@ -1,0 +1,190 @@
+.food-item-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.food-item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(255, 74, 43, 0.12), 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: rgba(255, 74, 43, 0.2);
+}
+
+.food-item-img-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.food-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.food-item-card:hover .food-item-image {
+    transform: scale(1.08);
+}
+
+.category-pill-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.quantity-control-wrapper {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+}
+
+.add-btn-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #ff4a2b;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.add-btn-circle:hover {
+    background: #ff4a2b;
+    color: #ffffff;
+    transform: scale(1.15) rotate(90deg);
+}
+
+.food-item-counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    padding: 4px 10px;
+    border-radius: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    animation: counterPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.counter-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.counter-btn.remove {
+    background: #ffe4e1;
+    color: #ff4a2b;
+}
+
+.counter-btn.add {
+    background: #ff4a2b;
+    color: #ffffff;
+}
+
+.counter-btn:hover {
+    transform: scale(1.15);
+}
+
+.counter-qty {
+    font-weight: 800;
+    font-size: 14px;
+    color: #1e293b;
+    min-width: 16px;
+    text-align: center;
+}
+
+.food-item-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.food-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.food-item-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.food-item-rating {
+    background: #fff7ed;
+    color: #f59e0b;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.food-item-desc {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+    flex-grow: 1;
+}
+
+.food-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.food-item-price {
+    font-size: 22px;
+    font-weight: 900;
+    color: #ff4a2b;
+}
+
+.price-tag-sub {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+@keyframes counterPop {
+    0% { transform: scale(0.6); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
