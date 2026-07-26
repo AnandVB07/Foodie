@@ -1,0 +1,133 @@
+.verify-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    padding: 100px 20px 40px 20px;
+}
+
+.verify-card {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.verify-card h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 20px 0 8px 0;
+}
+
+.order-id-txt {
+    color: #ff4a2b;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+}
+
+.verify-sub {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.success-checkmark-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: #ecfdf5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
+}
+
+.check-icon {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 4px solid #10b981;
+}
+
+.check-icon::before {
+    top: 3px;
+    left: -2px;
+    width: 30px;
+    transform-origin: 100% 50%;
+    border-radius: 100px 0 0 100px;
+}
+
+.check-icon::after {
+    top: 0;
+    left: 30px;
+    width: 60px;
+    transform-origin: 0 50%;
+    border-radius: 0 100px 100px 0;
+    animation: rotateCircle 4.25s ease-in;
+}
+
+.icon-line {
+    height: 5px;
+    background-color: #10b981;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+}
+
+.icon-line.line-tip {
+    top: 25px;
+    left: 10px;
+    width: 15px;
+    transform: rotate(45deg);
+    animation: iconLineTip 0.75s;
+}
+
+.icon-line.line-long {
+    top: 22px;
+    right: 8px;
+    width: 25px;
+    transform: rotate(-45deg);
+    animation: iconLineLong 0.75s;
+}
+
+.redirect-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes iconLineTip {
+    0% { width: 0; left: 1px; top: 19px; }
+    54% { width: 0; left: 1px; top: 19px; }
+    70% { width: 25px; left: -4px; top: 22px; }
+    84% { width: 12px; left: 10px; top: 25px; }
+    100% { width: 15px; left: 10px; top: 25px; }
+}
+
+@keyframes iconLineLong {
+    0% { width: 0; right: 23px; top: 30px; }
+    65% { width: 0; right: 23px; top: 30px; }
+    84% { width: 30px; right: 0px; top: 18px; }
+    100% { width: 25px; right: 8px; top: 22px; }
+}

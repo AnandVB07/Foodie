@@ -1,0 +1,99 @@
+.food-display {
+    padding: 20px 8% 60px 8%;
+}
+
+.food-display-header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.food-display-header h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.search-status-tag {
+    background: #fff1f0;
+    color: #ff4a2b;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 74, 43, 0.2);
+}
+
+.clear-search {
+    cursor: pointer;
+    margin-left: 8px;
+    font-weight: 800;
+}
+
+.food-display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.food-card-wrapper {
+    opacity: 0;
+    animation: foodCardFadeIn 0.5s ease-out forwards;
+}
+
+.no-food-found {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8fafc;
+    border-radius: 24px;
+    border: 2px dashed #e2e8f0;
+    margin: 30px 0;
+}
+
+.no-food-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.no-food-found h3 {
+    font-size: 22px;
+    color: #1e293b;
+    margin: 0 0 8px 0;
+}
+
+.no-food-found p {
+    color: #64748b;
+    font-size: 15px;
+    margin: 0 0 20px 0;
+}
+
+.reset-filter-btn {
+    background: #ff4a2b;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 74, 43, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.reset-filter-btn:hover {
+    transform: scale(1.05);
+}
+
+@keyframes foodCardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
