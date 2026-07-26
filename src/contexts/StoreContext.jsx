@@ -77,13 +77,13 @@ const StoreContextProvider = ({ children }) => {
     useEffect(() => {
         try {
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        } catch (e) {}
+        } catch (e) { }
     }, [cartItems]);
 
     useEffect(() => {
         try {
             localStorage.setItem('foodie_orders', JSON.stringify(orders));
-        } catch (e) {}
+        } catch (e) { }
     }, [orders]);
 
     const addToCart = async (itemId) => {
@@ -98,7 +98,7 @@ const StoreContextProvider = ({ children }) => {
                 await axios.post(`${url}/api/cart/add`, { itemId, userId: token }, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
-            } catch (error) {}
+            } catch (error) { }
         }
     };
 
@@ -119,7 +119,7 @@ const StoreContextProvider = ({ children }) => {
                     await axios.post(`${url}/api/cart/remove`, { itemId, userId: token }, {
                         headers: { Authorization: `Bearer ${token}` },
                     });
-                } catch (error) {}
+                } catch (error) { }
             }
         }
     };
@@ -134,8 +134,8 @@ const StoreContextProvider = ({ children }) => {
             if (cartItems[itemId] > 0) {
                 const itemInfo = food_list.find(item => item._id === itemId);
                 if (itemInfo) {
-                    const priceNum = typeof itemInfo.price === 'number' 
-                        ? itemInfo.price 
+                    const priceNum = typeof itemInfo.price === 'number'
+                        ? itemInfo.price
                         : parseFloat(itemInfo.price.toString().replace(/[^0-9.]/g, '')) || 0;
                     totalAmount += priceNum * cartItems[itemId];
                 }
@@ -158,6 +158,7 @@ const StoreContextProvider = ({ children }) => {
         return newOrder._id;
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         fetchFoodList();
         fetchCart();
