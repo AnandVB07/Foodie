@@ -1,0 +1,204 @@
+/* General styling */
+.cart-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Cart header */
+.cart-page-items {
+    display: grid;
+    grid-template-columns: 100px 1fr 120px 120px 120px 50px;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background: rgb(255, 85, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-page-items
+{
+    padding-right:40px ;
+}
+
+
+/* Cart item rows */
+.cart-item-list {
+    display: grid;
+    grid-template-columns: 100px 1fr 120px 120px 120px 50px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background: white;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.cart-item-list:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+}
+
+.cart-item-list img {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cross {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    transition: 0.2s ease-in-out;
+}
+
+.cross:hover {
+    color: darkred;
+    transform: scale(1.2);
+}
+
+/* ------------ Cart Total & Promo Box in Flex Column ------------ */
+.total-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Ensures both sections are centered and in a single column */
+    margin-top: 30px;
+    width: 100%;
+    max-width: 320px;
+    gap: 20px;  /* Space between cart total & promo box */
+}
+
+/* Cart total section */
+.cart-total, .promo-card {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Ensure both sections are inside a single flex column */
+.promo {
+    display: flex;
+    flex-direction: column; /* Stacks the promo box properly */
+    align-items: center; 
+    width: 100%;
+}
+
+/* Cart total items */
+.cart-total-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Checkout button */
+.cart-total button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.cart-total button:hover {
+    background-color: #0056b3;
+}
+
+/* Promo code box */
+.promo-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promo-card input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.promo-card button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.promo-card button:hover {
+    background-color: #218838;
+}
+
+/* ------------ Responsive Design ------------ */
+@media screen and (max-width: 768px) {
+    .cart-page-items,
+    .cart-item-list {
+        grid-template-columns: 80px 1fr 80px 80px 80px 40px;
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .cart-item-list img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .total-amount {
+        align-items: center; /* Centered layout for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cart-page-items,
+    .cart-item-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 95%;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .cart-item-list img {
+        height: 40px;
+        width: 40px;
+    }
+
+    /* Hide remove button on small screens */
+    .cart-item-list p:nth-child(6) {
+        display: none;
+    }
+
+    .total-amount {
+        align-items: center;
+    }
+}

@@ -1,0 +1,141 @@
+.myorder {
+    padding: 40px 5%;
+    min-height: 80vh;
+}
+
+.myorder h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.myorder-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.myorder-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 20px 24px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.myorder-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.myorder-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.myorder-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.myorder-info {
+    flex: 1;
+}
+
+.myorder-items-summary {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+.myorder-date {
+    font-size: 0.82rem;
+    color: #999;
+}
+
+.myorder-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.myorder-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.myorder-total {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e85d04;
+}
+
+.myorder-status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.myorder-address {
+    margin-top: 12px;
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* Empty / Loading States */
+.myorder-empty,
+.myorder-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    gap: 16px;
+    padding: 40px;
+}
+
+.myorder-empty-icon {
+    font-size: 5rem;
+}
+
+.myorder-empty h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.myorder-empty p {
+    color: #888;
+    font-size: 1rem;
+}
+
+.myorder-spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #e85d04;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

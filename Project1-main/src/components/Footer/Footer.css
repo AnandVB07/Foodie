@@ -1,0 +1,160 @@
+.footer-content
+{
+
+    background-color: #F0F0F5;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    height: 60vh;
+
+}
+.footer-content h2
+{
+
+    font-family:sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.92);
+
+}
+.footer-content p
+{
+    color: rgb(75, 75, 75);
+}
+.footer-content-left
+{
+    margin-left: 240px;
+
+}
+.footer-content-left img {
+    border-radius: 80px;
+    margin-left: 170px;
+    height: auto;
+    width: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer-content-left h1 {
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-bottom: 0;
+    display: inline-block;
+    color:orangered;
+    font-family: 'Playfair Display', cursive;
+}
+.footer-content-left {
+    padding-top: 40px;
+    padding-left: 70px;
+    display: flex;
+}
+
+.footer-content-right
+{
+    font-size: 15px;
+    padding-left: 0px;
+}
+#link
+{
+    margin-left: 10px;
+    transition: 0.3s;
+}
+#link:hover,#links:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.foot-content-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot-content-logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot-content-logo-row img {
+    border-radius: 80px;
+    height: auto;
+    width: 70px;
+    margin: 0;
+}
+
+.foot-content-logo-row h1 {
+    margin: 0 0 0 10px;
+    color: orangered;
+}
+
+.foot-content-logo p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    color: rgb(75, 75, 75);
+    text-align: center;
+}
+
+.footer-content-line
+{
+    margin: 0%;
+    margin-left: 270px;
+    width: 70%;
+    background-color: #F0F0F5;
+}
+.footer-content-rights
+{
+    text-align: center;
+    background-color: #F0F0F5;
+    margin: 0%;
+    padding-bottom: 20px;
+    
+}
+.footer-content-right img
+{
+    height: 50px;
+    width: 150px;
+    transition: 0.5s;
+}
+.footer-content-right img:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+
+@media (max-width:750px) {
+    .footer-content
+    {
+        height: 40vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 16px;
+        width: 900px;
+        background-color: #F0F0F5;
+        /* display: flex; */
+        flex-direction: column ;
+        gap:30px ;
+        text-align: center;
+    }
+    .footer-content-left
+    {
+        margin: 0%;
+        padding: 0%;
+    }
+    .footer-content-right
+    {
+        background-color: #F0F0F5;
+    }
+    .footer-content-rights
+    {
+        text-align: center;
+        padding-left: 0px;
+        margin-left: 00px;
+        background-color: white;
+    }
+    
+
+    
+}

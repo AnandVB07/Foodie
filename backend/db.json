@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": "b4221f88-972f-42ae-8339-37c276e4902e",
+      "name": "test1",
+      "email": "test1@gmail.com",
+      "password": "$2a$10$PusYfp37D3KjKk/EQfo.sOwEtHv5U3hEy9RcmM6L0sfwRouAkpSYK",
+      "createdAt": "2026-08-26T18:34:45.335Z"
+    }
+  ],
+  "carts": {
+    "b4221f88-972f-42ae-8339-37c276e4902e": {
+      "7": 1
+    }
+  },
+  "orders": []
+}

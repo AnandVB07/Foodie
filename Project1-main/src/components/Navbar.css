@@ -1,0 +1,235 @@
+    @import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+    /* --------------------- Navbar ------------------------ */
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        color: orangered;
+        background-color: whitesmoke;
+        position: fixed;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 3;
+        overflow: hidden;
+        margin-top: 0px;
+    }
+
+    .navbar img {
+        border-radius: 50%;
+        margin-left: 10px;
+        height: 60px;
+        width: 60px;
+    }
+
+    .navbar h1 {
+        font-weight: 700;
+        font-family: cursive;
+        margin: 0;
+    }
+
+    /* ----------------------------- List ----------------------------- */
+    .list {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .list a {
+        text-align: center;
+        color: orangered;
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 70px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    /* ---------------------------- Cart ---------------------------- */
+    .cart {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 100;
+        gap: 20px;
+        padding-right: 100px;
+        margin-right: 30px;
+    }
+
+    .cart li {
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        margin-left: 70px;
+    }
+
+    .cart-count {
+        background-color: brown;
+        position: absolute;
+        top: -8px;
+        right: -8px; 
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        border: 1px solid white;
+    }
+
+    .cart-prof
+    {
+        margin-left: 10px;
+    }
+
+    .bi-person
+    {
+        margin-left: 30px;
+    }
+
+    .cart i {
+        font-size: 20px;
+        color: orangered;
+    }
+
+    .list a.active {
+        color: white;
+    }
+    .cart-container {
+        position: relative;
+        display: inline-block; /* Ensures it only wraps the cart icon */
+    }
+    
+    .dot {
+        position: absolute;
+        top: -5px; /* Adjust this value based on design */
+        right: -5px; /* Adjust this value based on design */
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .bi .bi-person
+    {
+        padding-left: 100px;
+    }
+    
+    /* -----------------Mobile---------------*/
+
+
+    @media (max-width: 768px) {
+        .navbar
+        {
+            padding: 0%;
+            margin: 0%;
+        }
+        .navbar img
+        {
+            margin: 0%;
+            align-items: flex-start;
+            
+        }
+        .navbar h1
+        {
+            color: orangered;
+            margin: 0%;
+            padding: 0%;
+            /* text-align: left; */
+        }
+        .lists {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+        }
+        .list li
+        {
+            padding-left: 30px;
+            padding-top:10px;
+            margin: 0%;
+        }
+        .cart{
+            margin: 0%;
+            padding: 0%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .cart li
+        {
+            margin: 0%;
+            padding-left: 25px;
+            margin-left: 20px;
+        }
+        /* .list.active {
+            display: flex; /* Show menu when toggle button is clicked */
+        /* } */ 
+
+        /* .list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .list li:last-child {
+            border-bottom: none;
+        }
+
+        .list li:hover {
+            background-color: #f9f9f9;
+        }
+
+        .toggle-button {
+            display: block;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 20px;
+        } */
+    }
+
+    .navbar-profile {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .navbar-profile li {
+        font-size: 14px;
+        cursor: pointer;
+    }
+    
+    .navbar-profile-dropdown {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        max-width: 160px;
+        box-shadow: 0px 8px 6px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    
+    .navbar-profile-dropdown li {
+        /* padding: 12px 16px; */
+        text-decoration: none;
+        display: block;
+        color: #333;
+        cursor: pointer;
+    }
+    
+    .navbar-profile-dropdown li:hover {
+        background-color: #f1f1f1;
+    }
+    
+    .navbar-profile:hover .navbar-profile-dropdown {
+        display: block;
+    }
+
+    .navbar {
+        /* position: relative; */
+        overflow: visible !important; 
+        /* z-index: 1000; */
+    }
+    

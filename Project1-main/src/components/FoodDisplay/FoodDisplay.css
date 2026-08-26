@@ -1,0 +1,13 @@
+.food-display h2
+{
+    text-align: center;
+    padding: 10px;
+}
+.food-display-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ensures 4 equal columns */
+    gap: 20px; /* Adds proper spacing */
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+}

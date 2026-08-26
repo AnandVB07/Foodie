@@ -1,0 +1,125 @@
+.food-item {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.foodItem-img-container {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.food-item:hover
+{
+    transform: scale(1.05);
+
+}
+
+.foodItem-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-rating-image {
+    height: 20px;
+    width: 80px;
+}
+
+.food-item-name-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.food-item-name-rating p
+{
+    font-style:normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+.food-item-desc
+{
+    font-size: 12px;
+    padding-left: 4px;
+}
+
+.food-item-name-rating img {
+    margin-left: 10px;
+}
+
+.food-item-price
+{
+    color: red;
+    padding-left: 10px;
+}
+
+.add
+{
+    height: 13px;
+    width: auto;
+}
+
+.foodItem-img-container
+{
+    position:relative;
+}
+
+.foodItem-img-container .add
+{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.food-item-counter
+{
+    gap: 4px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    height:35px;
+    width: 60px;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.food-item-counter img
+{
+    height: auto;
+    width: 20px;
+    border: 1px solid black;
+    border-radius: 50%
+}
+
+.plus
+{
+    background-color: rgb(35, 67, 35);
+    color: black;
+}
+.remove
+{
+    background-color: pink;
+}
